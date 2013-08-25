@@ -1,0 +1,31 @@
+{
+  "name": "plumes",
+  "version": "0.0.1",
+  "description": "Backend services",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha test/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yycjs/plumes.git"
+  },
+  "keywords": [
+    "services",
+    "feathers",
+    "mongodb"
+  ],
+  "author": "Eric Kryski, David Luecke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yycjs/plumes/issues"
+  },
+  "dependencies": {
+    "mongoskin": "~0.6.0",
+    "underscore": "~1.5.1",
+    "uberproto": "~1.1.0"
+  },
+  "devDependencies": {
+    "chai": "~1.7.2"
+  }
+}
