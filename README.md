@@ -1,9 +1,9 @@
-# Wing
+# Legs
 
-[![Build Status](https://travis-ci.org/feathersjs/wing.png?branch=master)](https://travis-ci.org/feathersjs/wing)
+[![Build Status](https://travis-ci.org/feathersjs/legs.png?branch=master)](https://travis-ci.org/feathersjs/legs)
 
 A collection of services providing an easy connection to different kinds of Backends.
-Plumes works great with [Feathers](https://github.com/feathersjs/feathers)
+Legs works great with [Feathers](https://github.com/feathersjs/feathers)
 
 ## Service interface
 
