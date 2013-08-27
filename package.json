@@ -1,28 +1,36 @@
 {
-  "name": "wing",
+  "name": "legs",
+  "description": "Services for feathers to stand up on",
   "version": "0.0.1",
-  "description": "Make you backend fly",
-  "main": "lib/index.js",
-  "scripts": {
-    "test": "mocha test/ --recursive"
-  },
+  "homepage": "https://feathersjs.com",
   "repository": {
     "type": "git",
-    "url": "git://github.com/feathersjs/wing.git"
+    "url": "git://github.com/feathersjs/legs.git"
   },
   "keywords": [
     "services",
     "feathers",
     "mongodb"
   ],
-  "author": "YYCjs <hello@yycjs.com> (http://yycjs.com)",
+  "author": "Feathers <hello@feathersjs.com> (http://feathersjs.com)",
   "contributors": [
     "Eric Kryski <e.kryski@gmail.com> (http://erickryski.com)",
     "David Luecke <daff@neyeon.de> (http://neyeon.com)"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/feathersjs/wing/issues"
+    "url": "https://github.com/feathersjs/legs/issues"
+  },
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "engines": {
+    "node": "*",
+    "npm": "*"
   },
   "dependencies": {
     "mongoskin": "~0.6.0",
@@ -30,7 +38,14 @@
     "uberproto": "~1.1.0"
   },
   "devDependencies": {
+    "grunt-simple-mocha": "~0.4.0",
+    "grunt-cli": "~0.1.7",
+    "grunt": "~0.4.1",
+    "grunt-release": "~0.3.5",
+    "grunt-dox": "~0.4.2",
     "chai": "~1.7.2",
-    "mocha": "~1.12.0"
+    "mocha": "~1.12.0",
+    "sinon": "~1.7.2",
+    "sinon-chai": "~2.4.0"
   }
 }
