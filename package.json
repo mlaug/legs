@@ -1,14 +1,14 @@
 {
-  "name": "plumes",
+  "name": "wing",
   "version": "0.0.1",
-  "description": "Backend services",
+  "description": "Make you backend fly",
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha test/ --recursive"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/yycjs/plumes.git"
+    "url": "git://github.com/feathersjs/wing.git"
   },
   "keywords": [
     "services",
@@ -22,7 +22,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yycjs/plumes/issues"
+    "url": "https://github.com/feathersjs/wing/issues"
   },
   "dependencies": {
     "mongoskin": "~0.6.0",
