@@ -15,7 +15,11 @@
     "feathers",
     "mongodb"
   ],
-  "author": "Eric Kryski, David Luecke",
+  "author": "YYCjs <hello@yycjs.com> (http://yycjs.com)",
+  "contributors": [
+    "Eric Kryski <e.kryski@gmail.com> (http://erickryski.com)",
+    "David Luecke <daff@neyeon.de> (http://neyeon.com)"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/yycjs/plumes/issues"
