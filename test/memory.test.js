@@ -16,7 +16,7 @@ describe('Memory Service', function () {
   });
 
   afterEach(function(done){
-    service.destroy(1, function(err){
+    service.remove(1, function(err){
       done();
     });
   });
@@ -90,10 +90,10 @@ describe('Memory Service', function () {
 
   });
 
-  describe('destroy', function () {
+  describe('remove', function () {
 
     it('should delete an existing instance', function (done) {
-      service.destroy(1, function(error, data) {
+      service.remove(1, function(error, data) {
         expect(data.id).to.equal(1);
         expect(data.name).to.equal('Test 1');
         done();
@@ -101,7 +101,7 @@ describe('Memory Service', function () {
     });
 
     it('should return an error on db when instance to delete doesn\'t exist', function (done) {
-      service.destroy(3, function(error, data) {
+      service.remove(3, function(error, data) {
         expect(error).to.not.be.null;
         expect(data).to.be.undefined;
         done();
@@ -127,8 +127,8 @@ describe('Memory Service', function () {
     });
 
     afterEach(function(done){
-      service.destroy(2, function(){
-        service.destroy(3, function(){
+      service.remove(2, function(){
+        service.remove(3, function(){
           done();
         });
       });

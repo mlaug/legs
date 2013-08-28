@@ -35,7 +35,7 @@ describe('Mongo Service', function () {
   });
 
   afterEach(function(done){
-    service.destroy(_ids.Doug, function(err){
+    service.remove(_ids.Doug, function(err){
       done();
     });
   });
@@ -67,8 +67,8 @@ describe('Mongo Service', function () {
     });
 
     afterEach(function(done){
-      service.destroy(_ids.Bob, function(err, data){
-        service.destroy(_ids.Alice, function(err){
+      service.remove(_ids.Bob, function(err, data){
+        service.remove(_ids.Alice, function(err){
           done();
         });
       });
@@ -214,9 +214,9 @@ describe('Mongo Service', function () {
     it('should return an error on db error');
   });
 
-  describe('destroy', function () {
+  describe('remove', function () {
     it('should delete an existing instance', function(done){
-      service.destroy(_ids.Doug, function(error, data) {
+      service.remove(_ids.Doug, function(error, data) {
         expect(error).to.be.null;
         expect(data).to.be.ok;
         done();
