@@ -14,7 +14,6 @@ var _ids = {};
 
 function clean(done){
   databaseCleaner.clean(db, function() {
-    console.log('db cleaned');
     db.close();
     done();
   });
@@ -201,13 +200,9 @@ describe('Mongo Service', function () {
     it('should update an existing instance', function(done){
       service.update(_ids.Doug, { name: 'Doug', age: 12 }, function(error, data) {
         expect(error).to.be.null;
-        expect(data).to.be.ok;
-
-        service.get(_ids.Doug, function(error, data){
-          expect(data.name).to.equal('Doug');
-          expect(data.age).to.equal(12);
-          done();
-        });
+        expect(data.name).to.equal('Doug');
+        expect(data.age).to.equal(12);
+        done();
       });
     });
     it('should update multiple existing instances');
