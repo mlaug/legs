@@ -19,10 +19,7 @@ module.exports = function(grunt) {
       options: {
         globals: ['should', 'expect'],
         timeout: 3000,
-        ignoreLeaks: false,
-        // grep: '*-test',
-        ui: 'bdd',
-        reporter: 'spec'
+        ui: 'bdd'
       },
 
       all: { src: 'test/**/*.js' }
