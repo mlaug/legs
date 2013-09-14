@@ -2,8 +2,6 @@ var chai = require('chai');
 var expect = chai.expect;
 var DatabaseCleaner = require('database-cleaner');
 var databaseCleaner = new DatabaseCleaner('mongodb');
-var mongo = require('mongoskin');
-var db = mongo.db('localhost:27017/feathers');
 var Proto = require('uberproto');
 
 var MongoService = require('../lib/mongodb');
@@ -13,8 +11,8 @@ var service = Proto.create.call(MongoService, {
 var _ids = {};
 
 function clean(done){
-  databaseCleaner.clean(db, function() {
-    db.close();
+  databaseCleaner.clean(service.store, function() {
+    service.store.close();
     done();
   });
 }
