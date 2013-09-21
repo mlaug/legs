@@ -28,7 +28,7 @@ describe('Mongo Service', function () {
       name: 'Doug',
       age: 32
     }, function(error, data) {
-      _ids.Doug = data[0]._id;
+      _ids.Doug = data._id;
       done();
     });
   });
@@ -52,13 +52,13 @@ describe('Mongo Service', function () {
         age: 25
       }, function(err, bob){
 
-        _ids.Bob = bob[0]._id;
+        _ids.Bob = bob._id;
 
         service.create({
           name: 'Alice',
           age: 19
         }, function(err, alice){
-          _ids.Alice = alice[0]._id;
+          _ids.Alice = alice._id;
 
           done();
         });
@@ -161,14 +161,14 @@ describe('Mongo Service', function () {
   });
 
   describe('create', function () {
-    it('should create a single new instance', function(done){
+    it('should create a single new instance and call back with only one', function(done){
       service.create({
         name: 'Bill'
       }, function(error, data) {
         expect(error).to.be.null;
-        expect(data).to.be.instanceof(Array);
+        expect(data).to.be.instanceof(Object);
         expect(data).to.not.be.empty;
-        expect(data[0].name).to.equal('Bill');
+        expect(data.name).to.equal('Bill');
         done();
       });
     });
