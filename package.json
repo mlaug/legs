@@ -34,8 +34,8 @@
   },
   "dependencies": {
     "mongoskin": "~0.6.0",
-    "underscore": "~1.5.1",
-    "uberproto": "~1.1.0"
+    "uberproto": "~1.1.0",
+    "lodash": "~2.4.1"
   },
   "devDependencies": {
     "grunt-simple-mocha": "~0.4.0",
