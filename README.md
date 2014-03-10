@@ -15,7 +15,7 @@ You can extend an already implemented service by adding an object as second para
 var myTodoService = legs.mongodb(
     {
         collection: 'myTodoService',
-        connectionString: 'mongodb://127.0.0.1:27017/configtool'
+        connectionString: 'mongodb://127.0.0.1:27017/todo'
     },
     {
         get: function (id, params, cb) {
