@@ -23,7 +23,9 @@ var myTodoService = legs.mongodb(
 
             // this should be called every time to
             // base functionality
-            this._super(id, params, cb);
+            this._super(id, params, function(err, doc){
+                cb.apply(this, arguments);
+            });
         }
     }
 );
